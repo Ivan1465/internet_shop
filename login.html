@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Увійти</title>
+    <!-- Підключення стилів для сторінки логіну та медіа стилів -->
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <!-- Порожнє посилання (можна видалити, якщо не використовується) -->
+    <a href=""></a>
+</head>
+<body>
+    <!-- Хедер із навігацією -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Навігаційні посилання -->
+                <li><a href="main.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="status.html">Статус замовлення</a></li>
+                <li><a href="login.html">Увійти</a></li>
+                <li><a href="register.html">Реєстрація нового користувача</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основна частина сторінки з формою для входу -->
+    <main id="login">
+        <h1>Увійти</h1>
+        <!-- Форма для введення даних користувача -->
+        <form id="login-form">
+            <!-- Поле для введення імені користувача -->
+            <div class="form-group">
+                <label for="username">Ім'я користувача</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <!-- Поле для введення пароля -->
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <!-- Кнопка для надсилання форми -->
+            <button type="submit">Увійти</button>
+        </form>
+        <!-- Посилання на сторінку реєстрації, якщо у користувача немає акаунту -->
+        <p>Ще не маєте акаунту? <a href="register.html">Зареєструватися</a></p>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2025 Магазин комп'ютерної техніки. Всі права захищено.</p>
+    </footer>
+
+    <!-- Підключення скрипта для обробки логіну -->
+    <script src="scripts/login.js"></script>
+</body>
+</html>

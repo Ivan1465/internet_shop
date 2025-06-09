@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товарів</title>
+    <!-- Підключення стилів для сторінки каталогу та медіа стилів -->
+    <link rel="stylesheet" href="styles/catalog.css">
+    <link rel="stylesheet" href="styles/media.css">
+</head>
+
+<body>
+    <!-- Хедер з навігацією -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Навігаційне меню -->
+                <li><a href="main.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="status.html">Статус замовлення</a></li>
+                <li><a href="login.html">Увійти</a></li>
+                <li><a href="register.html">Реєстрація нового користувача</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="catalog">
+        <!-- Фільтри для пошуку товарів -->
+        <section id="filter-bar">
+            <!-- Поле для пошуку товарів -->
+            <input type="text" id="search" placeholder="Пошук товарів...">
+            
+            <!-- Фільтр за категорією товарів -->
+            <select id="category-filter">
+                <option value="all">Всі категорії</option>
+                <option value="laptops">Ноутбуки</option>
+                <option value="desktops">Системні блоки</option>
+                <option value="monitors">Монітори</option>
+                <option value="graphics">Відеокарти</option>
+                <option value="processors">Процесори</option>
+                <option value="keyboards">Клавіатури</option>
+                <option value="computer mouse">Миші</option>
+            </select>
+            
+            <!-- Фільтр за ціною товарів -->
+            <div id="price-filter">
+                <label>
+                    Ціна:
+                    <!-- Мінімальна ціна -->
+                    <input type="number" id="min-price" min="0" max="50000" value="0" /> грн -
+                    <!-- Максимальна ціна -->
+                    <input type="number" id="max-price" min="0" max="50000" value="50000" /> грн
+                </label>
+            </div>
+        </section>
+
+        <!-- Контейнер для відображення товарів -->
+        <section id="products-container"></section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2025 Магазин комп'ютерної техніки. Всі права захищено.</p>
+    </footer>
+
+    <!-- Підключення скрипту для каталогу товарів -->
+    <script src="scripts/catalog.js"></script>
+</body>
+</html>

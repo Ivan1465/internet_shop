@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відстеження замовлення</title>
+    <!-- Підключення стилів для сторінки статусу замовлення та медіа стилів -->
+    <link rel="stylesheet" href="styles/status.css">
+    <link rel="stylesheet" href="styles/media.css">
+</head>
+<body>
+    <!-- Хедер з навігаційним меню -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Перелічення основних сторінок сайту -->
+                <li><a href="main.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="status.html">Статус замовлення</a></li>
+                <li><a href="login.html">Увійти</a></li>
+                <li><a href="register.html">Реєстрація нового користувача</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основний контент сторінки відстеження замовлення -->
+    <main id="tracking">
+        <!-- Заголовок сторінки -->
+        <h1>Відстеження замовлення</h1>
+        <!-- Форма для пошуку замовлення за номером -->
+        <section id="search-order">
+            <input type="text" id="order-search" placeholder="Введіть номер замовлення">
+            <button id="search-button">Знайти замовлення</button>
+        </section>
+        <!-- Блок з інформацією про статус замовлення (спочатку прихований) -->
+        <section id="order-status" style="display: none;">
+            <p id="order-id">Номер замовлення: <span>12345</span></p>
+            <!-- Список статусів замовлення -->
+            <ul id="status-list">
+                <li class="status completed">Замовлення прийнято</li>
+                <li class="status completed">В роботі</li>
+                <li class="status active">Доставлено</li>
+                <li class="status">Приїхало</li>
+            </ul>
+        </section>
+        <!-- Повідомлення про помилку, якщо замовлення не знайдено -->
+        <p id="error-message" style="color: red; text-align: center; display: none;">
+            Замовлення не знайдено. Перевірте номер і спробуйте ще раз.
+        </p>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2025 Магазин комп'ютерної техніки. Всі права захищено.</p>
+    </footer>
+
+    <!-- Підключення скрипта для обробки статусу замовлення -->
+    <script src="scripts/status.js"></script>
+</body>
+</html>
