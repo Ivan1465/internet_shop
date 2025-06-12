@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <!-- Підключення стилів -->
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/media.css">
+</head>
+
+<body>
+    <!-- Хедер з навігацією -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Навігаційне меню -->
+                <li><a href="main.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="status.html">Статус замовлення</a></li>
+                <li><a href="login.html">Увійти</a></li>
+                <li><a href="register.html">Реєстрація нового користувача</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Основна частина корзини -->
+        <div id="cart-summary">
+            <!-- Загальна сума до сплати -->
+            <h2>Сума до сплати: <span id="total-price">0</span> грн</h2>
+
+            <!-- Таблиця з товарами в корзині -->
+            <div id="cart-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Товар</th>
+                            <th>Ціна</th>
+                            <th>Кількість</th>
+                            <th>Сума</th>
+                            <th>Дія</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-table-body"></tbody> <!-- Тіла таблиці будуть заповнюватися динамічно -->
+                </table>
+            </div>
+
+            <!-- Вибір міста для доставки -->
+            <div id="city-selection">
+                <label for="city">Виберіть місто:</label>
+                <select id="city" name="city">
+                    <option value="kyiv">Київ</option>
+                    <option value="brovary">Бровари</option>
+                    <option value="vinnytsia">Вінниця</option>
+                    <option value="dnipro">Дніпро</option>
+                    <option value="zhytomyr">Житомир</option>
+                    <option value="zaporizhzhia">Запоріжжя</option>
+                    <option value="ivano-frankivsk">Івано-Франківськ</option>
+                    <option value="kramatorsk">Краматорськ</option>
+                    <option value="kremenchuk">Кременчук</option>
+                    <option value="kropyvnytskyi">Кропивницький</option>
+                    <option value="lubny">Лубни</option>
+                    <option value="mykolaiv">Миколаїв</option>
+                    <option value="odesa">Одеса</option>
+                    <option value="poltava">Полтава</option>
+                    <option value="sofiyivska-borshchahivka">Софіївська Борщагівка</option>
+                    <option value="sumy">Суми</option>
+                    <option value="ternopil">Тернопіль</option>
+                    <option value="kharkiv">Харків</option>
+                    <option value="kherson">Херсон</option>
+                    <option value="khmelnytskyi">Хмельницький</option>
+                    <option value="cherkasy">Черкаси</option>
+                    <option value="chernihiv">Чернігів</option>
+                </select>
+            </div>
+
+            <!-- Вибір пошти для доставки -->
+            <div id="posta-selection">
+                <label for="posta">Виберіть пошту:</label>
+                <select id="posta" name="posta">
+                    <option value="nova-poshta">Нова пошта</option> <!-- Тут можна додати інші поштові сервіси, якщо потрібно -->
+                </select>
+            </div>
+
+            <!-- Вибір відділення Нової Пошти -->
+            <div id="branches-selection">
+                <label for="branch">Виберіть відділення:</label>
+                <select id="branch" name="branch"></select> <!-- Список відділень буде заповнюватися динамічно -->
+            </div>
+            
+            <!-- Вибір способу оплати -->
+            <div id="payment-selection">
+                <label for="payment-method">Спосіб оплати:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="cash">Готівкою при отриманні</option>
+                    <option value="card">Карткою</option>
+                </select>
+            </div>
+
+            <!-- Форма для введення карткових даних (відображається при виборі оплати карткою -->
+            <div id="card-payment-form" style="display: none;">
+                <label for="card-number">Номер картки:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+
+                <label for="expiry-date">Термін дії:</label>
+                <input type="month" id="expiry-date" name="expiry-date" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" required>
+            </div>
+
+            <!-- Кнопка для оформлення замовлення -->
+            <button id="checkout-button">Оформити замовлення</button>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2025 Магазин комп'ютерної техніки. Всі права захищено.</p>
+    </footer>
+
+    <!-- Підключення скриптів -->
+    <script src="scripts/cart.js"></script>
+</body>
+</html>

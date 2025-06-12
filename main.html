@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна сторінка</title>
+    <!-- Підключення стилів для головної сторінки та медіа стилів -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/media.css">
+    <script src="src/statusesRoutes.js"></script>
+</head>
+<body>
+    <!-- Хедер із навігацією по сторінках -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Навігаційні посилання на основні сторінки -->
+                <li><a href="./main.html">Головна</a></li>
+                <li><a href="./catalog.html">Каталог</a></li>
+                <li><a href="./cart.html">Корзина</a></li>
+                <li><a href="./status.html">Статус замовлення</a></li>
+                <li><a href="./login.html">Увійти</a></li>
+                <li><a href="./register.html">Реєстрація нового користувача</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основна частина сторінки -->
+    <main>
+        <!-- Вітання на головній сторінці -->
+        <section id="welcome">
+            <h1>Ласкаво просимо до нашого магазину комп'ютерної техніки!</h1>
+            <p>Оберіть найкраще обладнання для ваших потреб.</p>
+        </section>
+
+        <!-- Розділ популярних товарів -->
+        <section id="featured-products">
+            <h2>Популярні товари</h2>
+            <!-- Контейнер для відображення товарів (можна заповнити через JavaScript) -->
+            <div id="products-container"></div>
+        </section>
+
+        <!-- Розділ зворотного зв'язку -->
+        <section id="contact-us">
+            <h2>Зворотній зв'язок</h2>
+            <p>Ми завжди раді допомогти! Запитайте у нас, якщо у вас є питання.</p>
+            Форма зворотного зв'язку
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Ваше ім'я:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Ваша електронна пошта:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Ваше повідомлення:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <!-- Кнопка для надсилання форми -->
+                <button type="submit">Відправити</button>
+            </form>
+        </section>
+
+        <!-- Розділ з інформацією про місця розташування -->
+        <section id="location">
+            <h2>Наше місце розташування</h2>
+            <p>Адреса: м. Київ, вул. Хрещатик, 1</p>
+            <!-- Вбудована карта Google Maps для показу місця розташування -->
+            <iframe src="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9A%D1%80%D0%B5%D1%89%D0%B0%D1%82%D0%B8%D0%BA,+1,+%D0%9A%D0%B8%D0%B5%D0%B2,+01000/@50.4514767,30.5246194,698m/data=!3m2!1e3!4b1!4m6!3m5!1s0x40d4ce51c30217a5:0x857984a29c69fded!8m2!3d50.4514767!4d30.5271943!16s%2Fg%2F11q2vxw4jv?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2025 Магазин комп'ютерної техніки. Всі права захищено.</p>
+    </footer>
+
+    <!-- Підключення js для головної сторінки -->
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

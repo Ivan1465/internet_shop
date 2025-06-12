@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <!-- Підключення стилів для сторінки реєстрації та медіа стилів -->
+    <link rel="stylesheet" href="styles/register.css">
+    <link rel="stylesheet" href="styles/media.css">
+</head>
+<body>
+    <!-- Хедер з навігаційним меню -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Перелічення основних сторінок сайту -->
+                <li><a href="main.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="status.html">Статус замовлення</a></li>
+                <li><a href="login.html">Увійти</a></li>
+                <li><a href="register.html">Реєстрація нового користувача</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основний контент сторінки реєстрації -->
+    <main id="register">
+        <!-- Заголовок сторінки -->
+        <h1>Реєстрація</h1>
+        <!-- Форма реєстрації -->
+        <form id="register-form">
+            <!-- Поле для введення імені користувача -->
+            <div class="form-group">
+                <label for="new-username">Ім'я користувача</label>
+                <input type="text" id="new-username" name="new-username" required>
+            </div>
+            <!-- Поле для введення електронної пошти -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="new-email" name="new-email" required>
+            </div>
+            <!-- Поле для введення номера телефону -->
+            <div class="form-group">
+                <label for="new-telephone">Номер телефону</label>
+                <input type="telephone" id="new-telephone" name="new-telephone" required>
+            </div>
+            <!-- Поле для введення пароля -->
+            <div class="form-group">
+                <label for="new-password">Пароль</label>
+                <input type="password" id="new-password" name="new-password" required minlength="8">
+            </div>
+            <!-- Поле для підтвердження пароля -->
+            <div class="form-group">
+                <label for="confirm-password">Підтвердіть пароль</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <!-- Кнопка для відправки форми -->
+            <button type="submit">Зареєструватися</button>
+        </form>
+        <!-- Посилання на сторінку входу, якщо вже є акаунт -->
+        <p>Вже маєте акаунт? <a href="login.html">Увійти</a></p>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2025 Магазин комп'ютерної техніки. Всі права захищено.</p>
+    </footer>
+
+    <!-- Підключення JavaScript для реєстрації -->
+    <script src="scripts/register.js"></script>
+</body>
+</html>
